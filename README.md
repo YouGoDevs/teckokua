@@ -21,3 +21,9 @@ All decisions will be made as a community, for the community. No discriminatory 
 * GiveWP - Donation plugin for WordPress
 * Tailwind
 * Whatever else you want... create a PR
+
+## Kokua
+
+From [shelivesaloha](https://www.shelivesaloha.com/blog/2019/hawaiian-word-of-the-week-kokua): 
+
+> Kokua [koh-ku-ah] is an important concept in Hawaiian culture. It means “help,” but it goes deeper than that. Kokua is about helping others without expecting anything in return. In a world where we’re juggling so many demands and going about our day at full speed, it’s easy to lose sight of the needs of others.
