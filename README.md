@@ -1,5 +1,7 @@
 # Teckokua
 
+[Teckokua.com](https://www.teckokua.com/)
+
 ## Mission
 
 The goal of __Teckokua__ to have a “fund” where anyone new to the tech space can be featured for assistance, request assistance, or recommend someone else for assistance.
