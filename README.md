@@ -22,6 +22,10 @@ All decisions will be made as a community, for the community. No discriminatory 
 * Tailwind
 * Whatever else you want... create a PR
 
+## A Mission for Diversity
+
+Everyone deserves a fair chance at a better tomorrow. Especially so for those starting in tech that from underrepresented communities. Part of our core mission will be to help elevate voices and the skills of those at a disadvantage in an unfair system.
+
 ## Kokua
 
 From [shelivesaloha](https://www.shelivesaloha.com/blog/2019/hawaiian-word-of-the-week-kokua): 
