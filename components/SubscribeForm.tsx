@@ -2,15 +2,17 @@ import { FormEvent, useState } from 'react';
 
 const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status: string; message: string; }> = ({ subscribe, status, message }) => {
   const [email, setEmail] = useState('your@email.com');
+  const [fname, setFname] = useState('First Name');
+  const [lname, setLname] = useState('Last Name');
           
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     subscribe({
-      EMAIL: email
+      EMAIL: email,
+      FNAME: fname,
+      LNAME: lname,
     })
   }
-  console.log(`status: ${status}`);
-  console.log(`message: ${message}`);
 
   return (
     <>
@@ -24,13 +26,24 @@ const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status: string; me
         <div dangerouslySetInnerHTML={{__html: message}} />
       </div>
     )}
-    <form onSubmit={(e) => onSubmit(e)}>
+    {'success' !== status && (<form onSubmit={(e) => onSubmit(e)}>
       <label htmlFor="email" className="inline-block">
         Email: 
       </label>
-      <input type="email" placeholder={email} onChange={(e) => { setEmail(e.target.value)}} className="inline-block ml-5 border-black border-solid border-2 p-2" />
+      <input type="email" name="email" id="email" placeholder={email} onChange={(e) => { setEmail(e.target.value)}} className="inline-block ml-5 border-black border-solid border-2 p-2" />
+
+      <label htmlFor="fname" className="inline-block ml-5">
+        First Name: 
+      </label>
+      <input type="text" name="fname" id="fname" placeholder={fname} onChange={(e) => { setFname(e.target.value)}} className="inline-block ml-5 border-black border-solid border-2 p-2" />
+
+      <label htmlFor="lname" className="inline-block ml-5">
+        Last Name: 
+      </label>
+      <input type="text" name="lname" id="lname" placeholder={lname} onChange={(e) => { setLname(e.target.value)}} className="inline-block ml-5 border-black border-solid border-2 p-2" />
+
       <input type="submit" value="Subscribe" className="inline-block ml-5 py-2 px-10 bg-gray-400 text-white cursor-pointer" />
-    </form>
+    </form>)}
     </>
   )
 }
