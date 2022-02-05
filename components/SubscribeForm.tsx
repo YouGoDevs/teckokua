@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 
-const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status?: string; message?: string; }> = ({ subscribe, status, message }) => {
+const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status?: string|null; message?: string|null|Error; }> = ({ subscribe, status, message }) => {
   const [email, setEmail] = useState('your@email.com');
   const [fname, setFname] = useState('First Name');
   const [lname, setLname] = useState('Last Name');
@@ -18,12 +18,12 @@ const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status?: string; m
     <>
     { 'error' === status && (
       <div className="border-red-500 p-5 border-solid border-2 mb-5">
-        <div dangerouslySetInnerHTML={{__html: message}} />
+        <div dangerouslySetInnerHTML={{__html: message || ''}} />
       </div>
     )}
     { 'success' === status && (
       <div className="border-green-500 p-5 border-solid border-2 mb-5">
-        <div dangerouslySetInnerHTML={{__html: message}} />
+        <div dangerouslySetInnerHTML={{__html: message || ''}} />
       </div>
     )}
     {'success' !== status && (<form onSubmit={(e) => onSubmit(e)}>

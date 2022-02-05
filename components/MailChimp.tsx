@@ -14,7 +14,7 @@ const MailChimpForm: React.FC = () => {
       <MailchimpSubscribe
         url={postUrl}
         render={({ subscribe, status, message }) => (
-          <SubscribeForm subscribe={subscribe} status={status} message={message} />
+          <SubscribeForm subscribe={subscribe} status={status || ''} message={message || ''} />
         )}
       />
     </div>
