@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 
-const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status: string; message: string; }> = ({ subscribe, status, message }) => {
+const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status?: string; message?: string; }> = ({ subscribe, status, message }) => {
   const [email, setEmail] = useState('your@email.com');
   const [fname, setFname] = useState('First Name');
   const [lname, setLname] = useState('Last Name');
