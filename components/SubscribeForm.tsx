@@ -42,7 +42,7 @@ const SubscribeForm: React.FC<{ subscribe: ({}: any) => void; status?: string|nu
       </label>
       <input type="text" name="lname" id="lname" placeholder={lname} onChange={(e) => { setLname(e.target.value)}} className="inline-block ml-5 border-black border-solid border-2 p-2" />
 
-      <input type="submit" value="Subscribe" className="inline-block ml-5 py-2 px-10 bg-gray-400 text-white cursor-pointer" />
+      <input type="submit" value="Get Notified When We Launch!" className="inline-block ml-5 py-2 px-10 bg-gray-400 text-white cursor-pointer" />
     </form>)}
     </>
   )
